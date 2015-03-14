@@ -3,6 +3,7 @@
 * [Puppet](https://puppetlabs.com/)
 * [Librarian Puppet](http://librarian-puppet.com/)
 * [Puppet APT](https://github.com/puppetlabs/puppetlabs-apt)
+* [Introduction to PUppet](https://davidwinter.me/introduction-to-puppet/)
 
 # Headless X
 
