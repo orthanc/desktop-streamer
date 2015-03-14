@@ -19,4 +19,9 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+
+  config.vm.provision :puppet, :module_path => "private/puppet/modules" do |puppet|
+    puppet.manifests_path = "private/puppet/manifests"
+    puppet.manifest_file  = "base.pp"
+  end
 end
