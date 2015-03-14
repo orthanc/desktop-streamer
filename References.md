@@ -1,3 +1,9 @@
+# Puppet Automation
+
+* [Puppet](https://puppetlabs.com/)
+* [Librarian Puppet](http://librarian-puppet.com/)
+* [Puppet APT](https://github.com/puppetlabs/puppetlabs-apt)
+
 # Flash
 
 * Chome's own flash: https://support.google.com/chrome/answer/108086
