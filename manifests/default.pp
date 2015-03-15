@@ -13,6 +13,12 @@ package { 'ffmpeg':
 	ensure => installed,
 }
 
+# DJango
+
+package { ['python', 'python-django']:
+	ensure => installed,
+}
+
 
 # Debugging Packages
 
