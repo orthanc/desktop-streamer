@@ -2,3 +2,5 @@
 .tmp/
 .librarian/
 modules/
+**/*.pyc
+desktop_streamer_web/db.sqlite3

@@ -8,5 +8,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'desktop_streamer_web.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^video/', include('desktop_video_stream.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
