@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 """
 
 import os, sys
-sys.path.append('/vagrant/desktop_streamer_web')
+sys.path.append('/var/django_sites')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "desktop_streamer_web.settings")
 
 from django.core.wsgi import get_wsgi_application

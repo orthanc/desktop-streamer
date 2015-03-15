@@ -21,9 +21,10 @@ class { 'apache':
 	default_confd_files => false,
 }
 
-apache::vhost { 'wsgi.example.com':
+apache::vhost { 'desktop_streamer_web':
 	port                        => '80',
-	docroot                     => '/vagrant/desktop_streamer_web/desktop_streamer_web',
+	docroot                     => '/var/django_sites/desktop_streamer_web',
+	manage_docroot              => false,
 	wsgi_application_group      => '%{GLOBAL}',
 	wsgi_daemon_process         => 'wsgi',
 	wsgi_daemon_process_options => {
@@ -31,22 +32,29 @@ apache::vhost { 'wsgi.example.com':
 		threads      => '15',
 		display-name => '%{GROUP}',
 	},
-	wsgi_import_script          => '/vagrant/desktop_streamer_web/desktop_streamer_web/wsgi.py',
+	wsgi_import_script          => '/var/django_sites/desktop_streamer_web/wsgi.py',
 	wsgi_import_script_options  => {
 		process-group => 'wsgi',
 		application-group => '%{GLOBAL}'
 	},
 	wsgi_process_group          => 'wsgi',
-	wsgi_script_aliases         => { '/' => '/vagrant/desktop_streamer_web/desktop_streamer_web/wsgi.py' },
+	wsgi_script_aliases         => { '/' => '/var/django_sites/desktop_streamer_web/wsgi.py' },
 }
 
 package { ['python', 'python-django']:
 	ensure => installed,
 }
 
-
 # Debugging Packages
 
 package { 'x11vnc':
 	ensure => installed,
+}
+
+# Vagrant
+file { 'django apache dir':
+	path    => '/var/django_sites',
+	target  => '/vagrant/desktop_streamer_web',
+	ensure  => link,
+	before  => Apache::Vhost['desktop_streamer_web'],
 }
