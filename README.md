@@ -7,3 +7,11 @@ There is arguably no particular reason for this other than because we can, chrom
 # Current Status
 
 This is not a functional project at this stage.
+
+# Setup
+
+Prerequisites:
+
+* Vagrant
+* Puppet
+* librarian-puppet

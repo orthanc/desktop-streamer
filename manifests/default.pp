@@ -1,7 +1,17 @@
-exec { 'apt-get install xvfb':
-	command => '/usr/bin/apt-get install -y xvfb fluxbox'
+class { 'apt': }
+
+apt::ppa { 'ppa:mc3man/trusty-media':
+	before => Package['ffmpeg'],
 }
 
-exec { 'apt-get install x11vnc':
-	command => '/usr/bin/apt-get install -y x11vnc'
+package { ['xvfb', 'fluxbox']:
+	ensure => installed,
+}
+
+package { 'x11vnc':
+	ensure => installed,
+}
+
+package { 'ffmpeg':
+	ensure => installed,
 }

@@ -21,6 +21,6 @@ Vagrant.configure(2) do |config|
   # SHELL
 
   config.vm.provision "puppet" do |puppet|
-	#puppet.module_path = "modules"
+	puppet.module_path = "modules"
   end
 end
