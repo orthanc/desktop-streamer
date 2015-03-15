@@ -1,5 +1,6 @@
 class { 'apt': }
 
+# Base Recording
 apt::ppa { 'ppa:mc3man/trusty-media':
 	before => Package['ffmpeg'],
 }
@@ -8,10 +9,13 @@ package { ['xvfb', 'fluxbox']:
 	ensure => installed,
 }
 
-package { 'x11vnc':
+package { 'ffmpeg':
 	ensure => installed,
 }
 
-package { 'ffmpeg':
+
+# Debugging Packages
+
+package { 'x11vnc':
 	ensure => installed,
 }
