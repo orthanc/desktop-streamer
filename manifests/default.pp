@@ -1,7 +1,8 @@
-class { 'apt': }
+class { 'apt':
+}
 
 # Base Recording
-apt::ppa { 'ppa:mc3man/trusty-media':
+apt::ppa { 'ppa:kirillshkrogalev/ffmpeg-next':
 	before => Package['ffmpeg'],
 }
 
@@ -16,6 +17,7 @@ package { 'ffmpeg':
 class { 'apache':
 	default_mods        => false,
 	default_confd_files => false,
+	default_vhost       => true,
 }
 
 # Debugging Packages
