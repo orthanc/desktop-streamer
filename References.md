@@ -16,7 +16,22 @@
 
 # Web Frameworks
 
+* [Learn Wsgi](http://wsgi.readthedocs.org/en/latest/learn.html)
+* [Wsgi Tutorial](http://webpython.codepoint.net/wsgi_tutorial)
+* [Non Standard Chunked WSGI on Stack Overflow](http://stackoverflow.com/questions/12091067/handling-http-chunked-encoding-with-django)
+* [Chunked Encoding in puppet mod_wsgi](https://tickets.puppetlabs.com/browse/MODULES-1423)
+* [Blog on problems with WSGI](http://www.b-list.org/weblog/2009/aug/10/wsgi/)
+* [Example trying to do iterative response using WSGI highlightinbg issues](http://rhodesmill.org/brandon/2013/chunked-wsgi/)
 * [Django](https://www.djangoproject.com/)
+
+# Python
+
+* [Explination of Generators - Functions as an Iterator](https://wiki.python.org/moin/Generators)
+
+# Fun with HTTP
+
+* [Chunked Encoding Wikipedia](http://en.wikipedia.org/wiki/Chunked_transfer_encoding)
+* [HTTP Watch Chunked Encoding](http://www.httpwatch.com/httpgallery/chunked/)
 
 # Chrome Cast Apps
 
