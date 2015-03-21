@@ -4,6 +4,7 @@
 forge "https://forgeapi.puppetlabs.com"
 
 mod 'puppetlabs-apt'
+mod 'puppetlabs-apache'
 
 # use dependencies defined in metadata.json
 #metadata

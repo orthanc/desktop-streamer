@@ -13,6 +13,10 @@ package { 'ffmpeg':
 	ensure => installed,
 }
 
+class { 'apache':
+	default_mods        => false,
+	default_confd_files => false,
+}
 
 # Debugging Packages
 
